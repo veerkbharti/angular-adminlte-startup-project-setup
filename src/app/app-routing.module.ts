@@ -3,6 +3,7 @@ import {Routes, RouterModule} from '@angular/router';
 import {AuthGuard} from '@/core/guards/auth.guard';
 import {NonAuthGuard} from '@/core/guards/non-auth.guard';
 import {NoFoundPageComponent} from './shared/components/no-found-page/no-found-page.component';
+import { MainComponent } from '@modules/main/main.component';
 
 const routes: Routes = [
     {
@@ -12,6 +13,7 @@ const routes: Routes = [
     },
     {
         path: 'admin',
+        component: MainComponent,
         canActivate: [AuthGuard],
         canActivateChild: [AuthGuard],
         loadChildren: () =>

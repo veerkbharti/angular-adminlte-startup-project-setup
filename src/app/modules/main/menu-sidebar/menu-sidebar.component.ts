@@ -35,27 +35,27 @@ export const MENU = [
     {
         name: 'Dashboard',
         iconClasses: 'fas fa-tachometer-alt',
-        path: ['/']
+        path: ['/admin']
     },
     {
         name: 'Blank',
         iconClasses: 'fas fa-file',
-        path: ['/blank']
+        path: ['/admin/blank']
     },
-    {
-        name: 'Main Menu',
-        iconClasses: 'fas fa-folder',
-        children: [
-            {
-                name: 'Sub Menu',
-                iconClasses: 'far fa-address-book',
-                path: ['/sub-menu-1']
-            },
-            {
-                name: 'Blank',
-                iconClasses: 'fas fa-file',
-                path: ['/sub-menu-2']
-            }
-        ]
-    }
+    // {
+    //     name: 'Main Menu',
+    //     iconClasses: 'fas fa-folder',
+    //     children: [
+    //         {
+    //             name: 'Sub Menu',
+    //             iconClasses: 'far fa-address-book',
+    //             path: ['/sub-menu-1']
+    //         },
+    //         {
+    //             name: 'Blank',
+    //             iconClasses: 'fas fa-file',
+    //             path: ['/sub-menu-2']
+    //         }
+    //     ]
+    // }
 ];
