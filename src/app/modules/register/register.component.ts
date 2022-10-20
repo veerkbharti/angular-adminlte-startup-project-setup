@@ -1,3 +1,4 @@
+import { AppService } from '@/core/services/app.service';
 import {
     Component,
     OnInit,
@@ -6,7 +7,6 @@ import {
     HostBinding
 } from '@angular/core';
 import {UntypedFormGroup, UntypedFormControl, Validators} from '@angular/forms';
-import {AppService} from '@services/app.service';
 import {ToastrService} from 'ngx-toastr';
 
 @Component({

@@ -1,8 +1,8 @@
+import { AppService } from '@/core/services/app.service';
 import {AppState} from '@/store/state';
 import {UiState} from '@/store/ui/state';
 import {Component, HostBinding, OnInit} from '@angular/core';
 import {Store} from '@ngrx/store';
-import {AppService} from '@services/app.service';
 import {Observable} from 'rxjs';
 
 const BASE_CLASSES = 'main-sidebar elevation-4';
@@ -44,7 +44,7 @@ export const MENU = [
     },
     {
         name: 'Main Menu',
-        iconClasses: 'fas fa-folder',        
+        iconClasses: 'fas fa-folder',
         children: [
             {
                 name: 'Sub Menu',

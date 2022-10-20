@@ -16,7 +16,7 @@ export class AppService {
             const token = await Gatekeeper.loginByAuth(email, password);
             localStorage.setItem('token', token);
             await this.getProfile();
-            this.router.navigate(['/']);
+            this.router.navigate(['/admin']);
         } catch (error) {
             this.toastr.error(error.message);
         }
@@ -27,7 +27,7 @@ export class AppService {
             const token = await Gatekeeper.registerByAuth(email, password);
             localStorage.setItem('token', token);
             await this.getProfile();
-            this.router.navigate(['/']);
+            this.router.navigate(['/admin']);
         } catch (error) {
             this.toastr.error(error.message);
         }
@@ -38,7 +38,7 @@ export class AppService {
             const token = await Gatekeeper.loginByGoogle();
             localStorage.setItem('token', token);
             await this.getProfile();
-            this.router.navigate(['/']);
+            this.router.navigate(['/admin']);
         } catch (error) {
             this.toastr.error(error.message);
         }
@@ -49,7 +49,7 @@ export class AppService {
             const token = await Gatekeeper.registerByGoogle();
             localStorage.setItem('token', token);
             await this.getProfile();
-            this.router.navigate(['/']);
+            this.router.navigate(['/admin']);
         } catch (error) {
             this.toastr.error(error.message);
         }
@@ -60,7 +60,7 @@ export class AppService {
             const token = await Gatekeeper.loginByFacebook();
             localStorage.setItem('token', token);
             await this.getProfile();
-            this.router.navigate(['/']);
+            this.router.navigate(['/admin']);
         } catch (error) {
             this.toastr.error(error.message);
         }
@@ -71,7 +71,7 @@ export class AppService {
             const token = await Gatekeeper.registerByFacebook();
             localStorage.setItem('token', token);
             await this.getProfile();
-            this.router.navigate(['/']);
+            this.router.navigate(['/admin']);
         } catch (error) {
             this.toastr.error(error.message);
         }
@@ -90,6 +90,6 @@ export class AppService {
         localStorage.removeItem('token');
         localStorage.removeItem('gatekeeper_token');
         this.user = null;
-        this.router.navigate(['/login']);
+        this.router.navigate(['/auth/login']);
     }
 }

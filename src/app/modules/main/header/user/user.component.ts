@@ -1,5 +1,5 @@
+import { AppService } from '@/core/services/app.service';
 import {Component, OnInit} from '@angular/core';
-import {AppService} from '@services/app.service';
 import {DateTime} from 'luxon';
 
 @Component({

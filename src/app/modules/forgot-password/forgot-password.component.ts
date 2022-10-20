@@ -1,3 +1,4 @@
+import { AppService } from '@/core/services/app.service';
 import {
     Component,
     HostBinding,
@@ -7,7 +8,6 @@ import {
 } from '@angular/core';
 import {UntypedFormControl, UntypedFormGroup, Validators} from '@angular/forms';
 import {ToastrService} from 'ngx-toastr';
-import {AppService} from '@services/app.service';
 
 @Component({
     selector: 'app-forgot-password',
